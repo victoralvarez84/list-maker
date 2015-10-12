@@ -5,6 +5,7 @@ import source from 'vinyl-source-stream';
 import browserSync from 'browser-sync';
 import sass from 'gulp-sass';
 import ghPages from 'gh-pages';
+import path from 'path';
 
 const sync = browserSync.create();
 
@@ -46,8 +47,8 @@ gulp.task('styles', () => {
 
 gulp.task('build', ['html', 'script', 'styles']);
 
-gulp.task("deploy", ["build"], () => {
-  ghPages.publish("dist");
+gulp.task("deploy", ["build"], function(cb) {
+  ghPages.publish(path.join(process.cwd(), "dist"), cb);
 });
 
 gulp.task('serve', ['build'], () => {
