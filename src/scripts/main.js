@@ -73,7 +73,7 @@ const ListMaker = React.createClass({
 //VIRTUAL DOM
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <ListMaker names={["Jason", "Jason", "Sandra", "Mark"]} /> ,
+    <ListMaker names={["Jeff", "Katrina", "Victor", "Travis"]} /> ,
     document.querySelector('.app')
   );
 });
