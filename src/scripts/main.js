@@ -61,7 +61,7 @@ const ListMaker = React.createClass({
       return <ListItem key={i} name={item} index={i} onRemove={this.removeName} />
     });
     return (<div>
-      <h1>List Maker</h1>
+      <h1>Add Names to the List</h1>
       <ul>
         {listItems}
       </ul>
